@@ -8,4 +8,6 @@ fn main() {
 
         number -= 1; //ou number = number - 1;
     }
+
+    println!("LIFTOFF!!!")
 }
