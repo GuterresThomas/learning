@@ -1,13 +1,13 @@
 fn main() { 
 
 
-    let mut number = 3;
+    let a = [10, 20, 30, 40, 50];
 
-    while number != 0 {
-        println!("{number}");
+    let mut index = 0;
 
-        number -= 1; //ou number = number - 1;
+    while index < 5 {
+        println!("the value is: {}", a[index]);
+
+        index += 1; // ou index = index + 1
     }
-
-    println!("LIFTOFF!!!")
 }
