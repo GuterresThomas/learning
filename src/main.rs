@@ -1,8 +1,10 @@
 fn main() {
-    let y: i32 = {
-        let x: i32 = 3;
-        x + 1
-    };
+    let y = five();
 
     println!("the value of y is: {y}");
+}
+
+
+fn five() -> i32 {
+    5
 }
