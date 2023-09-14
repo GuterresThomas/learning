@@ -1,8 +1,16 @@
-struct Color(i32, i32, i32);
-struct Point(i32, i32, i32);
+fn main () {
+    enum Message {
+        Quit,
+        Move {x: i32, y: i32},
+        Write(String),
+        ChangeColor(i32, i32, i32),
+    }
+    impl Message {
+        fn call(&self) {
+            
+        }
+    }
 
+    let m = Message::Write(String::from("Hello"));
 
-fn main() {
-    let black = Color(0, 0, 0);
-    let origin = Point(0, 0, 0);    
 }
