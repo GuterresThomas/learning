@@ -2,16 +2,14 @@ fn main()  {
 
     let s1 = String::from("hello");
     
-    let(s2, len) = calculate_len(s1);
+    let len = calculate_len(&s1);
 
-    println!("The length of '{}' is '{}'", s2, len);
+    println!("The length of '{}' is '{}'", s1, len);
     }
 
 
-fn calculate_len(s: String) -> (String, usize) {
-    let length = s.len();
-
-    (s, length)
+fn calculate_len(s: &String) -> usize {
+    s.len() //s pode ser qualquer coisa, estou renomeando a variável s1 no caso
 }
 
     
