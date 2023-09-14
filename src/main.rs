@@ -1,7 +1,21 @@
+
+struct User {
+    active: bool,
+    username: String,
+    email: String,
+    sign_in_count: u64
+}
+
+
+
 fn main () {
-    let a = [1, 2, 3, 4, 5];
 
-    let slice = &a[1..3];
+    let mut user1 = User {
+        active: true,
+        username: String::from("John Deer"),
+        email: String::from("Email@email.com"),
+        sign_in_count: 1,
+    };
 
-    assert_eq!(slice, &[2, 3]);
+    user1.email = String::from("emailchanged@email.com");
 }
