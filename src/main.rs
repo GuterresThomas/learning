@@ -6,16 +6,22 @@ struct User {
     sign_in_count: u64
 }
 
+fn build_user(email: String, username: String) -> User {
+    User {
+        active: true,
+        username: username,
+        email: email,
+        sign_in_count: 1
+    }
+}
 
 
 fn main () {
 
-    let mut user1 = User {
-        active: true,
-        username: String::from("John Deer"),
-        email: String::from("Email@email.com"),
-        sign_in_count: 1,
-    };
+    let user1 = build_user(
+        String::from("email@email.com"),
+        String::from("John Deer"),
+    );
 
-    user1.email = String::from("emailchanged@email.com");
+    println!("{}", user1.email);
 }
