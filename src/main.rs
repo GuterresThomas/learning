@@ -1,15 +1,16 @@
 fn main()  {
 
     let mut s = String::from("hello");
-    
-    change(&mut s);
 
-    println!("{}", s);
-    }
+    let r1 = &s; // no problem
+    let r2 = &s; // no problem
 
-    fn change(some_string: &mut String) {
-        some_string.push_str(", world");
-    }   
+    println!("{}, {}", r1, r2);
+
+    let r3 = &mut s; // BIG PROBLEM
+    println!("{}", r3);
+
+}
 
 
 
