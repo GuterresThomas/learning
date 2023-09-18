@@ -1,10 +1,3 @@
-
 fn main () {
-    let mut count = 0;
-    
-    if let Coin::Quarter (state) = coin {
-        println!("State Quarter from {}", state);
-    }else {
-        count += 1;
-    }
+    let v: Vec<i32> = Vec::new();
 }
