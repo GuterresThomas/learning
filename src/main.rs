@@ -1,8 +1,9 @@
-fn main () {
-   let s1 = String::from("tic");
-   let s2: String = String::from("tac");
-   let s3: String = String::from("toe");
+use std::collections::HashMap;
 
-   let s = format!("{}-{}-{}", s1, s2, s3);
-   println!("{}", s)
+fn main () {
+   let mut scores = HashMap::new();
+
+   scores.insert(String::from("Blue"), 10);
+   scores.insert(String::from("yellow"), 50);
+
 }
