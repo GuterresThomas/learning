@@ -17,5 +17,6 @@ fn main () {
         },
     };*/
 
-    let greeting_file = File::open("Helo.txt").unwrap();
+    let greeting_file = File::open("Helo.txt")
+        .expect("Hello.txt should be included in this project");
 }
