@@ -1,9 +1,15 @@
 fn main () {
-    let mut v = vec![100, 32, 57];
-    for i in &mut v {
-       *i += 50;// *i = i + 50
-       println!("{i}")
-    }
+   enum SpreadsheetCell {
+    Int(i32),
+    Float(f64),
+    Text(String),
+   }
+
+   let row = vec![
+    SpreadsheetCell::Int(3),
+    SpreadsheetCell::Float(3.5),
+    SpreadsheetCell::Text(String::from("Text")),
+   ];
 
     
 
