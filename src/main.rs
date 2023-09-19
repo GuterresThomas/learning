@@ -1,19 +1,6 @@
 fn main () {
-   enum SpreadsheetCell {
-    Int(i32),
-    Float(f64),
-    Text(String),
-   }
+   let mut s = String::from("Hello");
+   s.push_str("string");
 
-   let row = vec![
-    SpreadsheetCell::Int(3),
-    SpreadsheetCell::Float(3.5),
-    SpreadsheetCell::Text(String::from("Text")),
-   ];
-
-    
-
-
-
-
+   println!("{}", s)
 }
