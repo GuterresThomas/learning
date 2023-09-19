@@ -1,10 +1,14 @@
 fn main () {
-    let mut v = Vec::new();
-    v.push(5);
-    v.push(4);
-    v.push(3);
-    v.push(2);
-    v.push(1);
+    let v = vec![1,2,3,4,5];
+
+    let third: &i32 = &v[2];
+    println!("The third element of v is {}", third);
+
+    let third:Option<&i32> = v.get(2);
+    match third {
+        Some(third) => println!("The third element of v is {}", third),
+        None => println!("There is no third element"),
+    }
 
 
 }
