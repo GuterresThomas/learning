@@ -1,34 +1,8 @@
-fn largest (list: &[i32]) -> &i32 {
-    let mut largest = &list[0];
-
-    for item in list {
-        if item > largest {
-            largest = item
-        }
-    }
-
-    largest
+struct Point<T> {
+    x: T,
+    y: T,
 }
-
-fn largest_char(list: &[char]) -> &char {
-    let mut largest = &list[0];
-
-    for item in list {
-        if item > largest {
-            largest = item 
-        }
-    }
-    largest
-}
-
-fn main () {
-    let number_list = vec![34, 50, 25, 100, 65];
-
-    let result = largest(&number_list);
-    println!("Largest number is {}", result);
-
-    let char_list = vec!['y', 'm', 'a', 'q'];
-
-    let result = largest_char(&char_list);
-    println!("The largest char is {}", result);
+fn main() {
+    let integer = Point {x: 5, y: 10};
+    let float = Point {x: 1.0, y: 5.0}; //tem que ser o mesmo tipo
 }
