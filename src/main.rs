@@ -1,7 +1,13 @@
-use std::fs::File;
-use std::error::Error;
+fn main () {
+    let number_list = vec![34, 50, 25, 100, 65];
 
-fn main() -> Result<(), Box<dyn Error>> {
-    let greeting_file = File::open("Hello.txt")?;
-    Ok(())
+    let mut largest = &number_list[0];
+
+    for number in &number_list {
+        if number > largest {
+            largest = number
+        }
+    }
+
+    println!("Largest number is {}", largest)
 }
